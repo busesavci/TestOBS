@@ -1,0 +1,49 @@
+@model _1._3.Models.Ogrenci  
+  
+@{  
+    ViewData["Title"] = "Eleman Ekle";  
+}  
+<h2>Create</h2>  
+<h4>Öğrenci Ekle</h4>  
+<hr />  
+<div class="row">  
+    <div class="col-md-4">  
+        <form asp-action="Create">  
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+            <div class="form-group">  
+                <label asp-for="ogrenci_no" class="control-label"></label>  
+                <input asp-for="ogrenci_no" class="form-control" />  
+                <span asp-validation-for="ogrenci_no" class="text-danger"></span>  
+            </div>   
+            <div class="form-group">  
+                <label asp-for="ogrenci_ad" class="control-label"></label>  
+                <input asp-for="ogrenci_ad" class="form-control" />  
+                <span asp-validation-for="ogrenci_ad" class="text-danger"></span>  
+            </div> 
+            <div class="form-group">  
+                <label asp-for="ogrenci_soyad" class="control-label"></label>  
+                <input asp-for="ogrenci_soyad" class="form-control" />  
+                <span asp-validation-for="ogrenci_soyad" class="text-danger"></span>  
+            </div>  
+            <div class="form-group">  
+                <label asp-for="ogrenci_email" class="control-label"></label>
+                <input asp-for="ogrenci_email" class="form-control" />   
+                <span asp-validation-for="ogrenci_email" class="text-danger"></span>  
+            </div>  
+            <div class="form-group">  
+                <label asp-for="ogrenci_sifre" class="control-label"></label>  
+                <input asp-for="ogrenci_sifre" class="form-control" />  
+                <span asp-validation-for="ogrenci_sifre" class="text-danger"></span>  
+            </div>  
+            <div class="form-group">  
+                <input type="submit" value="Create" class="btn btn-default" />  
+            </div>  
+        </form>  
+    </div>  
+</div>  
+<div>  
+    <a asp-action="Index">Back to List</a>  
+</div>  
+@section Scripts {  
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}  
+}

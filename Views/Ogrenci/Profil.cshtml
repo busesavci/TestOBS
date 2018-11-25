@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+@model IEnumerable<_1._3.Models.Ogrenci>
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SDU OBS - Profil</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="~/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet"></head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"><span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="index.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li><a href="../Index">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-user"></i> <span class="nav-label">Profil</span></a>
+                    </li>
+                    <li>
+                         <a href="dersBilgileri.html"><i class="fa fa-diamond"></i> <span class="nav-label">Ders Bilgileri</span></a>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Email view</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="email_template.html">Email templates</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="form_basic.html">Basic form</a></li>
+                            <li><a href="form_advanced.html">Advanced Plugins</a></li>
+                            <li><a href="form_file_upload.html">File Upload</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="dilekceFormu.html" class="nav-babel"><i class="fa fa-desktop"></i><span class="nav-label">Dilekçe Formu</span><span class="pull-right label label-primary">YENİ</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Miscellaneous</span><span class="label label-info pull-right">NEW</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="pdf_viewer.html">PDF viewer</a></li>
+                            <li><a href="i18support.html">i18 support</a></li>
+                            <li><a href="sweetalert.html">Sweet alert</a></li>
+                            <li><a href="spinners.html">Spinners</a></li>
+                            <li><a href="google_maps.html">Google maps</a></li>
+                            <li><a href="social_buttons.html">Social buttons</a></li>
+                            <li><a href="modal_window.html">Modal window</a></li>
+                            <li><a href="chat_view.html">Chat view</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI Elements</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="video.html">Video</a></li>
+                            <li><a href="tabs_panels.html">Panels</a></li>
+                            <li><a href="notifications.html">Notifications & Tooltips</a></li>
+                            <li><a href="helper_classes.html">Helper css classes</a></li>
+                            <li><a href="badges_labels.html">Badges, Labels, Progress</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="table_basic.html">Static Tables</a></li>
+                            <li><a href="table_data_tables.html">Data Tables</a></li>
+                        </ul>
+                    </li>
+                    <li class="landing_link">
+                        <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">Landing Page</span> <span class="label label-warning pull-right">NEW</span></a>
+                    </li>
+                    <li class="special_link">
+                        <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Welcome to obs sdu.</span>
+                </li>
+                <li>
+                    <a href="../">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Profile</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="active">
+                            <strong>Profile</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+
+
+
+
+<! Öğrenci Bilgilerinin Bulunacağı Kısım. >
+            <div class="row m-b-lg m-t-lg">
+                <div class="col-md-6">
+
+                    <div class="profile-image">
+                        <img src="~/img/avatar.png" class="img-circle circle-border m-b-md" alt="profile">
+                    </div>
+                    <div class="profile-info">
+                        <div class="">
+                            <div>
+                                 @foreach (var item in Model) {
+                                <h2 class="no-margins">
+                                    @Html.DisplayFor(modelItem => item.ogrenci_ad) @Html.DisplayFor(modelItem => item.ogrenci_soyad) 
+                                </h2>
+                                <h4>Okul Numarası  :   </h4>
+                                 }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <table class="table small m-b-xs">
+                        <tbody>
+                            @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                <strong>Bölümü    :</strong> @Html.DisplayFor(modelItem => item.ogrenci_email)
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Fakülte : </strong>  @Html.DisplayFor(modelItem => item.ogrenci_email)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Okul Maili : </strong> @Html.DisplayFor(modelItem => item.ogrenci_email)
+                            </td>
+                        </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+<! Öğrenci Bilgilerinin Biteceği Kısım. >
+
+
+
+
+
+            <div class="row">
+
+
+
+
+                <! Dönemlik Bilgilerin Olduğu Kısım Kredi vs..  >
+                <div class="col-lg-8">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Dönemlik Bilgiler</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>OKUL NO </th>
+                                <th>AD</th>
+                                <th>SINIF</th>
+                                <th>Ortalama</th>
+                                <th>KREDİ (GÜZ)</th>
+                                <th>KREDİ (BAHAR)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var item in Model) {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.ogrenci_ad)</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>3.00</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mahmut Hacı</td>
+                                <td>1</td>
+                                <td>3.00</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mahmut Hacı</td>
+                                <td>1</td>
+                                <td>3.00</td>
+                                <td>30</td>
+                                <td>30</td>
+                            </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+                
+                <! Dönemlik Bilgilerin Bittiği Kısım Kredi vs..  >
+
+
+
+                <div class="col-lg-4 m-b-lg">
+                    <center><h1>Önemli Linkler</h1><center>
+                    <div id="vertical-timeline" class="vertical-container light-timeline no-margins">
+                        <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon blue-bg">
+                                <i class="fa fa-file-text"></i>
+                            </div>
+
+                            <div class="vertical-timeline-content">
+                                <h2>Link 1</h2><a href="#" class="btn btn-sm btn-primary">More info</a>
+                            </div>
+                        </div>
+                        <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon blue-bg">
+                                <i class="fa fa-file-text"></i>
+                            </div>
+                            <div class="vertical-timeline-content">
+                                <h2>Link2</h2><a href="#" class="btn btn-sm btn-primary">More info</a>
+                            </div>
+                        </div>
+                        <div class="vertical-timeline-block"><div class="vertical-timeline-icon blue-bg">
+                                <i class="fa fa-file-text"></i>
+                            </div>
+                            <div class="vertical-timeline-content">
+                                <h2>Link3</h2><a href="#" class="btn btn-sm btn-primary">More info</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+
+            $("#sparkline1").sparkline([34, 43, 43, 35, 44, 32, 44, 48], {
+                type: 'line',
+                width: '100%',
+                height: '50',
+                lineColor: '#1ab394',
+                fillColor: "transparent"
+            });
+
+
+        });
+    </script>
+
+</body>
+
+</html>

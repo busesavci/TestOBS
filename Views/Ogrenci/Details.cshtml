@@ -1,0 +1,46 @@
+@model _1._3.Models.Ogrenci 
+  
+@{    
+    ViewData["Title"] = "Detaylar";    
+}    
+<h2>Details</h2>    
+<div>    
+    <h4>Detaylar</h4>    
+    <hr />    
+    <dl class="dl-horizontal"> 
+        <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_no)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_no)    
+        </dd>    
+        <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_ad)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_ad)    
+        </dd> 
+        <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_soyad)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_soyad)    
+        </dd>    
+        <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_email)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_email)    
+        </dd>    
+        <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_sifre)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_sifre)    
+        </dd>        
+    </dl>    
+</div>    
+<div>    
+    <a asp-action="Edit" asp-route-id="@Model.ogrenci_no">Edit</a> |    
+    <a asp-action="Index">Back to List</a>    
+</div>

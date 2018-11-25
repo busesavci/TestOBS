@@ -1,0 +1,45 @@
+@model _1._3.Models.Ogrenci  
+  
+@{    
+    ViewData["Title"] = "Eleman Sil";    
+}    
+<h2>Delete</h2>    
+<h3>Are you sure you want to delete this?</h3>    
+<div>    
+    <h4>Öğrenciler</h4>    
+    <hr />    
+    <dl class="dl-horizontal">    
+        <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_ad)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_ad)    
+        </dd> 
+         <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_soyad)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_soyad)    
+        </dd> 
+          <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_email)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_email)    
+        </dd>     
+        <dt>    
+            @Html.DisplayNameFor(model => model.ogrenci_sifre)    
+        </dt>    
+        <dd>    
+            @Html.DisplayFor(model => model.ogrenci_sifre)    
+        </dd>    
+         
+         
+    </dl>    
+    
+    <form asp-action="Delete">    
+        <input type="hidden" asp-for="ogrenci_no" />    
+        <input type="submit" value="Delete" class="btn btn-default" /> |    
+        <a asp-action="Index">Back to List</a>    
+    </form>    
+</div>
